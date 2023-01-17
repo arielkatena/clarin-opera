@@ -1,0 +1,70 @@
+.discos {
+  .fila {
+    max-width: 1000px;
+    margin: 15vh auto 5vh auto;
+    padding: 0;
+    text-align: center;
+
+    @media (min-width: $tablet-s) {
+      text-align: left;
+    }
+    @media (min-width: $desktop-s) {
+      margin: 20vh auto;
+      padding: 0;
+    }
+
+    em {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: block;
+      font-family: $font-especial;
+      // font-family: $font-alt;
+      font-size: 32px;
+      font-weight: 400;
+      padding-bottom: 15px;
+      color: #999;
+
+      @media (min-width: $desktop-s) {
+        position: relative;
+        left: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      p {
+        @media (min-width: $desktop-s) {
+          padding-right: 50px;
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      display: flex;
+      flex-direction: column-reverse;
+
+      @media (min-width: $tablet-s) {
+        flex-direction: row;
+      }
+
+      .columna:first-child {
+        @media (min-width: $desktop-s) {
+          text-align: right;
+          padding-right: 50px;
+        }
+      }
+    }
+  }
+
+  img {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 70%;
+    margin: 0 0 30px 0px;
+
+    @media (min-width: $tablet-l) {
+      margin: 0 0 30px 60px;
+    }
+  }
+}

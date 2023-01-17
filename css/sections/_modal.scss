@@ -1,0 +1,118 @@
+.modal {
+  // display: none !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // transform: translateX(100%);
+  transition: all 0.6s cubic-bezier(0.79, 0.01, 0.08, 1);
+  pointer-events: none;
+
+  // opacity: 1;
+  background-color: white;
+}
+
+.modal__scroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #000;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #000;
+  }
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal--autor .contenedor {
+  padding: 0;
+
+  width: 100%;
+
+  @media (min-width: $desktop-s) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.autor {
+  &__foto {
+    top: 80px;
+    width: 100%;
+    flex-basis: 40%;
+    padding-top: 10px;
+    position: sticky;
+
+    img {
+      width: 80%;
+      max-width: 240px;
+
+      @media (min-width: $desktop-s) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__text {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    width: 100%;
+
+    @media (min-width: $desktop-s) {
+    }
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    left: auto;
+    top: 30px;
+    right: 15px;
+    z-index: 9999;
+
+    width: 48px;
+    height: 48px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    background: #333
+      url("https://www.clarin.com/redaccionfiler/clarin/desarrollo/2022/espectaculos/opera/barbero/images/icons/icon-close.svg")
+      center center no-repeat;
+    background-size: 16px;
+    border-radius: 99px;
+    transition: 0.35s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #666;
+      border: 0 solid #666;
+    }
+
+    svg {
+      width: 16px;
+      fill: #fff;
+      margin: 0;
+    }
+  }
+}

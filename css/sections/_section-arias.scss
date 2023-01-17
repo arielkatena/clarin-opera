@@ -1,0 +1,148 @@
+body .arias {
+  background: #000 url("../images/video.jpg") top center no-repeat;
+  background-position-x: 57%;
+  position: relative;
+  @media (min-width: $desktop-s) {
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.25);
+    pointer-events: none;
+    // z-index: 2;
+  }
+
+  @media (min-width: $tablet-s) {
+    background-position-x: center;
+  }
+  @media (min-width: $desktop-s) {
+    background-size: cover;
+  }
+
+  .contenido {
+    z-index: 10;
+    position: relative;
+  }
+
+  .fila {
+    padding: 0;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+
+    @media (min-width: $tablet-l) {
+      padding: 0 0 15px 0;
+      flex-direction: row;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+  }
+
+  iframe {
+    margin: 0px 0 60px 0 !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: 65vh;
+    max-height: 590px;
+
+    @media (min-width: $desktop-s) {
+      height: 65vh;
+      max-height: 590px;
+    }
+  }
+
+  .contenido .columna--iframe {
+    @media (min-width: $tablet-l) {
+      padding-right: 60px !important;
+      flex-basis: 40%;
+      min-width: 600px;
+      position: sticky;
+    }
+  }
+
+  .sticky--foto {
+    top: 15%;
+    display: flex;
+    justify-content: center;
+  }
+
+  p strong {
+    font-family: var(--main-font-bold);
+  }
+
+  p > span {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0 0 15px 0;
+
+    letter-spacing: -0.01em;
+    font-family: $font-especial;
+    font-weight: 700 !important;
+    font-size: 30px;
+    line-height: 1;
+
+    em {
+      font-weight: 400;
+      font-style: normal !important;
+      color: #fff;
+      font-family: var(--main-font-regular-text);
+      font-size: 80%;
+    }
+
+    @media (min-width: $desktop-s) {
+      padding: 0 0 15px 0;
+
+      // font-family: $font-alt;
+      // font-weight: 400;
+      // font-size: 21px;
+      // letter-spacing: 0.35em;
+    }
+
+    // &::after {
+    //   @media (min-width: $desktop-s) {
+    //     display: block;
+    //     content: "";
+    //     position: absolute;
+    //     top: 45%;
+    //     left: 0;
+    //     width: 25px;
+    //     height: 1px;
+    //     background-color: #666;
+    //   }
+    // }
+
+    span {
+      font-size: 16px;
+      color: #999;
+      display: block;
+      font-family: $font-alt;
+      font-weight: 400;
+      letter-spacing: 0.35em;
+      padding: 8px 0 10px 0;
+      // opacity: 0;
+      // display: none;
+    }
+  }
+
+  .aria {
+    margin: 60px 0 0 0;
+    text-align: left;
+    border-bottom: 1px solid #ffffff55;
+    padding-bottom: 60px;
+
+    @media (min-width: $desktop-s) {
+      text-align: left;
+      // border-bottom: 0px solid #ffffff55;
+      // padding-bottom: 0px;
+    }
+  }
+}

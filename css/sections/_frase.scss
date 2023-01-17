@@ -1,0 +1,39 @@
+article {
+  .frase {
+    font-family: $font-especial;
+    font-size: 32px;
+    line-height: 0.9;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    padding: 5vh 0;
+    text-align: center;
+
+    @media (min-width: $tablet-s) {
+      font-size: 42px;
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+    @media (min-width: $desktop-s) {
+      padding: 10vh 0;
+      margin: 0 auto;
+      width: 50vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media (min-width: $desktop-xl) {
+      font-size: 50px;
+    }
+
+    em {
+      // font-style: italic;
+      font-style: normal;
+      font-family: var(--main-font-regular-text-it);
+    }
+  }
+  .columna__foto .frase {
+    width: auto;
+    text-align: left;
+  }
+}

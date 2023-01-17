@@ -1,0 +1,56 @@
+.lugar {
+  padding: 0;
+
+  .titulo--detalle::after {
+    display: none;
+  }
+
+  .fullfoto::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    top: 0;
+    height: 55%;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  }
+
+  .fullfoto {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100vh;
+
+    @media (min-width: $landscape) {
+      align-items: flex-start;
+    }
+
+    @media (min-width: $tablet-l) {
+      height: 120vh;
+    }
+  }
+  .fullfoto__info {
+    max-width: 800px;
+    width: 100%;
+    z-index: 3;
+    margin: 0 auto 0 auto;
+  }
+
+  .fullfoto__bg {
+    background: url("../images/lugar.jpg") center top/cover no-repeat;
+
+    // background-size: 200%;
+    // background-position-x: 5%;
+
+    @media (min-width: $landscape) {
+      background-size: cover;
+    }
+
+    @media (min-width: $tablet-l) {
+      padding: 0 0 20vh 0;
+      background-size: cover;
+      background-position-x: center;
+    }
+  }
+}
