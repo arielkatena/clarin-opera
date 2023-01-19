@@ -1,5 +1,7 @@
 body .arias {
-  background: #000 url("../images/video.jpg") top center no-repeat;
+  background: #000
+    url("https://www.clarin.com/redaccionfiler/clarin/desarrollo/2023/espectaculos/laboheme/images/video.jpg") top
+    center no-repeat;
   background-position-x: 57%;
   position: relative;
   @media (min-width: $desktop-s) {

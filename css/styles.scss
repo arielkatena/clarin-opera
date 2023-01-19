@@ -12,3 +12,7 @@
 @import "sections/section-autor";
 @import "sections/video";
 @import "sections/creditos";
+
+body .arias .contenido {
+  z-index: 4 !important;
+}
