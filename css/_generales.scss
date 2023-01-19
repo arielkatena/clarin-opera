@@ -112,10 +112,10 @@ $desktop-xl: 1600px;
 
 section {
   position: relative;
-  padding: 10vh 0;
+  padding: 60px 0 10vh 0;
 
   @media (min-width: $desktop-s) {
-    padding: 10vw 0;
+    padding: 60px 0;
   }
 
   .titulo {
@@ -210,7 +210,7 @@ section {
     padding-top: 20px;
 
     @media (min-width: $desktop-s) {
-      padding-top: 70px;
+      padding-top: 10px;
     }
   }
 }
@@ -372,7 +372,7 @@ section {
 }
 .pad-top-half {
   @media (min-width: $desktop-s) {
-    padding-top: 5vw;
+    padding-top: 70px;
   }
 }
 
@@ -383,6 +383,7 @@ section {
 
   @media (min-width: $desktop-s) {
     display: block;
+    padding-bottom: 70px;
   }
 }
 
